@@ -1,10 +1,15 @@
 def web_agent():
-    return "Fetched data from web"
+    print("Web Agent: Fetching data from web...")
+    return "Data fetched"
 
-def task_agent():
-    return "Task completed"
+def task_agent(data):
+    print("Task Agent: Processing data...")
+    return f"Task completed using {data}"
+
 def main_agent():
-    print(web_agent())
-    print(task_agent())
+    data = web_agent()
+    result = task_agent(data)
+    print("Final Output:", result)
 
-main_agent()
+if _name_ == "_main_":
+    main_agent()
